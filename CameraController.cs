@@ -71,7 +71,7 @@ namespace YizziCamModV2
         {
             this.gameObject.AddComponent<InputManager>().gameObject.AddComponent<UI>();
             ColorScreenGO = LoadBundle("ColorScreen", "YizziCamModV2.Assets.colorscreen");
-            CameraTablet = LoadBundle("CameraTablet", "YizziCamModV2.Assets.yizzicamera");
+            CameraTablet = LoadBundle("CameraTablet", "YizziCamModV2.Assets.yizzicam");
             FirstPersonCameraGO = GorillaTagger.Instance.mainCamera;
             ThirdPersonCameraGO = GameObject.Find("Player Objects/Third Person Camera/Shoulder Camera");
             CMVirtualCameraGO = GameObject.Find("Player Objects/Third Person Camera/Shoulder Camera/CM vcam1");
@@ -147,7 +147,7 @@ namespace YizziCamModV2
             meshRenderers.Add(GameObject.Find("CameraTablet(Clone)/Tablet").GetComponent<MeshRenderer>());
             meshRenderers.Add(GameObject.Find("CameraTablet(Clone)/Handle").GetComponent<MeshRenderer>());
             meshRenderers.Add(GameObject.Find("CameraTablet(Clone)/Handle2").GetComponent<MeshRenderer>());
-            ColorScreenGO.transform.position = new Vector3(-54.3f, 16.21f, -122.96f);
+            ColorScreenGO.transform.position = new Vector3(-60.8835f, 19.85f, -114.8835f);
             ColorScreenGO.transform.Rotate(0, 30, 0);
             ColorScreenGO.SetActive(false);
             MiscPage.SetActive(false);

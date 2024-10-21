@@ -2,23 +2,17 @@
 using UnityEngine;
 using GorillaLocomotion;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 #pragma warning disable CS0618
 namespace YizziCamModV2.Comps
 {
     class UI : MonoBehaviour
     {
         public GameObject forest;
-        public GameObject cave;
-        public GameObject canyon;
-        public GameObject mountain;
         public GameObject city;
-        public GameObject clouds;
         public GameObject cloudsbottom;
-        public GameObject beach;
         public GameObject beachthing;
-        public GameObject basement;
         public GameObject citybuildings;
-
         GameObject rigcache;
         bool keyp;
         bool uiopen;
@@ -40,16 +34,10 @@ namespace YizziCamModV2.Comps
         {
             rigcache = GameObject.Find("Player Objects/RigCache/Rig Parent");
             forest = GameObject.Find("Environment Objects/LocalObjects_Prefab/Forest");
-            city = GameObject.Find("Environment Objects/LocalObjects_Prefab/City");
-            canyon = GameObject.Find("Environment Objects/LocalObjects_Prefab/Canyon");
-            cave = GameObject.Find("Environment Objects/LocalObjects_Prefab/Cave_Main_Prefab");
-            mountain = GameObject.Find("Environment Objects/LocalObjects_Prefab/Mountain");
-            clouds = GameObject.Find("Environment Objects/LocalObjects_Prefab/skyjungle");
-            cloudsbottom = GameObject.Find("Environment Objects/LocalObjects_Prefab/Forest/Sky Jungle Bottom (1)/CloudSmall (22)");
-            beach = GameObject.Find("Environment Objects/LocalObjects_Prefab/Beach");
+            city = GameObject.Find("Environment Objects/LocalObjects_Prefab/City_WorkingPrefab");
+            cloudsbottom = GameObject.Find("Environment Objects/LocalObjects_Prefab/SkyJungleBottom");
             beachthing = GameObject.Find("Environment Objects/LocalObjects_Prefab/ForestToBeach");
-            basement = GameObject.Find("Environment Objects/LocalObjects_Prefab/Basement");
-            citybuildings = GameObject.Find("Environment Objects/LocalObjects_Prefab/City/CosmeticsRoomAnchor/rain");
+            citybuildings = GameObject.Find("Environment Objects/LocalObjects_Prefab/Vista_Prefab");
         }
         void OnGUI()
         {
@@ -101,22 +89,27 @@ namespace YizziCamModV2.Comps
                         spectating = false;
                     }
                 }
-                if (GUI.Button(new Rect(35f, 110f, 160f, 20f), "Load All Maps(PRIVS)"))
+                if (GUI.Button(new Rect(35f, 110f, 160f, 20f), "Load All Maps(PRIVS) (Broken)"))
                 {
+                    /*
+                    
+                    TODO: Harmony Patch to stop Gorilla Tag from disabling these in privates.
+
                     if (!PhotonNetwork.CurrentRoom.IsVisible)
                     {
                         forest.SetActive(true);
-                        cave.SetActive(true);
-                        canyon.SetActive(true);
-                        beach.SetActive(true);
+                        SceneManager.LoadScene("Cave", LoadSceneMode.Additive);
+                        SceneManager.LoadScene("Canyon2", LoadSceneMode.Additive);
+                        SceneManager.LoadScene("Beach", LoadSceneMode.Additive);
                         beachthing.SetActive(true);
                         city.SetActive(true);
-                        mountain.SetActive(true);
-                        basement.SetActive(true);
-                        clouds.SetActive(true);
+                        SceneManager.LoadScene("Mountain", LoadSceneMode.Additive);
+                        SceneManager.LoadScene("Basement", LoadSceneMode.Additive);
+                        SceneManager.LoadScene("Skyjungle", LoadSceneMode.Additive);
                         cloudsbottom.SetActive(false);
                         citybuildings.SetActive(false);
                     }
+                    */
                 }
                 if (specui)
                 {
@@ -125,7 +118,7 @@ namespace YizziCamModV2.Comps
                     {
                         if (player.transform.parent.gameObject.active)
                         {
-                            GUI.Label(new Rect(250, 20 + (i * 25), 160, 20), player.playerText.text);
+                            GUI.Label(new Rect(250, 20 + (i * 25), 160, 20), player.playerText1.text);
                             if (GUI.Button(new Rect(360, 20 + (i * 25), 67, 20), "Spectate"))
                             {
                                 followobject = player.gameObject;
