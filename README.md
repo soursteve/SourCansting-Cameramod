@@ -1,4 +1,4 @@
-# YizziCamModV2 												[![Github All Releases](https://img.shields.io/github/downloads/Yizzii/YizziCamModV2/total.svg)]() 
+# YizziCamModV2 												[![Github All Releases](https://img.shields.io/github/downloads/Abnumality/YizziCamModV2/total.svg)]() 
 
 
 ### Note: THIS IS A FORK OF YIZZI'S CAMERA MOD FOR THE NEWEST UPDATE.
