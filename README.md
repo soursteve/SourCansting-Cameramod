@@ -1,7 +1,7 @@
 # YizziCamModV2 												[![Github All Releases](https://img.shields.io/github/downloads/Abnumality/YizziCamModV2/total.svg)]() 
 
 
-### Note: THIS IS A FORK OF YIZZI'S CAMERA MOD FOR THE NEWEST UPDATE.
+### Note: THIS IS A FORK OF Abnumalitys yizzi camera mod that was forked from yizzi camera mod this is modified for casting
 THE ORIGINAL REPOSITORY IS LOCATED AT: https://github.com/Yizzii/YizziCamModV2/
 
 
@@ -20,6 +20,7 @@ Camera Mod with in game UI!
 * Grabbable Handles (you can only grab right side with right hand and left side with left hand)
 * Green Screen (in city)
 * Adjustable FOV, Nearclip and smoothing
+* Casting features For Cgt and GTC
 
 ### *Controls:*
 * disable first person view by pressing X/Y
